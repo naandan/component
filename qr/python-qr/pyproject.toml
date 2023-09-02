@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "testqr"
+version = "0.1.0"
+description = ""
+authors = ["nandan <nandanramdani608@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+opencv-python = "^4.8.0.74"
+qrcode = {extras = ["pil"], version = "^7.4.2"}
+pyzbar = "^0.1.8"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

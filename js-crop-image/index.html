@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crop Your Image</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="cropper.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <input type="file" id="file" hidden />
+      <button id="select" class="btn">Click to Select Your Image!</button>
+
+      <div class="box hide">
+        <div class="crop"></div>
+        <img class="cropped" src="" alt="" />
+      </div>
+
+      <div class="options hide">
+        <button class="btn edit hide">Edit</button>
+        <button class="btn save hide">Save</button>
+        <a href="" class="btn download hide">Download</a>
+      </div>
+    </main>
+    <script src="cropper.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Detection from Camera</title>
+</head>
+<body>
+    <video id="video" autoplay playsinline style="transform: scaleX(-1);"></video>
+    <p id="status"></p>
+    <script src="face-api.js"></script>
+    <script>
+      Promise.all([
+          faceapi.nets.tinyFaceDetector.loadFromUri('/models'),
+      ]).then(startCamera);
+
+        async function startCamera() {
+            const video = document.getElementById('video');
+            const stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
+            video.srcObject = stream;
+        }
+
+        async function detectFaceFromCamera() {
+            const video = document.getElementById('video');
+            const detections = await faceapi.detectSingleFace(video, new faceapi.TinyFaceDetectorOptions());
+            const status = document.getElementById('status');
+            
+            if (detections) {
+                status.textContent = 'Status: Wajah terdeteksi!';
+            } else {
+                status.textContent = 'Status: Tidak ada wajah yang terdeteksi.';
+            }
+        }
+
+        video.addEventListener('play', () => {
+            setInterval(detectFaceFromCamera, 100);
+        });
+    </script>
+</body>
+</html>
