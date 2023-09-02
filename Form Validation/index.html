@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="formbox">
+        <div class="inner"></div>
+        <div><i class="fas fa-lock"></i></div>
+        <div>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="password"
+            required
+            oninput="textChange()"
+          />
+        </div>
+        <div>
+          <span class="showPass">
+            <img
+              src="https://i.postimg.cc/HWMtCN1m/eye-close.png"
+              alt="eye"
+              class="eye-Close"
+              id="img1"
+              onclick="toggle()"
+            />
+          </span>
+        </div>
+      </div>
+
+      <div class="validator">
+        <p id="capital">
+          <i class="fas fa-times"></i>
+          <i class="fas fa-check"></i>
+          <span>Upper Case</span>
+        </p>
+        <p id="special-char">
+          <i class="fas fa-times"></i>
+          <i class="fas fa-check"></i>
+          <span>Sepcial Character</span>
+        </p>
+        <p id="number">
+          <i class="fas fa-times"></i>
+          <i class="fas fa-check"></i>
+          <span>Number</span>
+        </p>
+        <p id="more-than-8">
+          <i class="fas fa-times"></i>
+          <i class="fas fa-check"></i>
+          <span>More than 8 characters</span>
+        </p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

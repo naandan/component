@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #5256ad;
+}
+.drop-zone {
+  border: 2px dashed #fff;
+  height: 500px;
+  width: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.drop-zone.active {
+  border: 2px solid #fff;
+}
+.drop-zone .icon {
+  font-size: 100px;
+  color: #fff;
+}
+.drop-zone header {
+  font-size: 30px;
+  font-weight: 500;
+  color: #fff;
+}
+.drop-zone span {
+  font-size: 25px;
+  font-weight: 500px;
+  color: #fff;
+  margin: 10px 0 15px 0;
+}
+.drop-zone button {
+  padding: 10px 25px;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background: #fff;
+  color: #5256ad;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.result {
+  width: 500px;
+}
+.btn {
+  padding: 10px 25px;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background: #fff;
+  color: #5256ad;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.hide {
+  display: none;
+}
+.hasil {
+  width: 300px;
+  height: fit-content;
+}
+.hasil img {
+  width: 100%;
+}

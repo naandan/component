@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Drag & Crop Image</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="cropper.css" />
+  </head>
+  <body>
+    <div class="drop-zone">
+      <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+      <header>Drag & Drop to Upload File</header>
+      <span>OR</span>
+      <button>Browse File</button>
+      <input type="file" hidden />
+    </div>
+    <div class="hasil hide"></div>
+    <img src="" class="result hide" />
+    <div class="options">
+      <button class="btn edit hide">Edit</button>
+      <button class="btn save hide">Save</button>
+    </div>
+    <script src="cropper.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
